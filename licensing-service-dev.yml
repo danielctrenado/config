@@ -19,10 +19,10 @@ spring:
                 default_schema: danschema
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: *
+    endpoints:
+        web:
+            exposure:
+                include: '*'
 
 example:
     property: I AM DEV
