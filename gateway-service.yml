@@ -1,10 +1,6 @@
 server:
   port: 8072
 
-spring:
-  application:
-    name: gateway-service
-
 eureka:
     client:
         fetchRegistry: true
@@ -15,6 +11,8 @@ eureka:
         preferIpAddress: true
 
 spring:
+  appliction:
+    name: gateway-service
   cloud:
     gateway:
         discovery.locator:
