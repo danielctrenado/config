@@ -15,3 +15,6 @@ spring:
   jpa:
     properties:
       hibernate.default_schema: danschema
+
+server:
+  port: 8081
