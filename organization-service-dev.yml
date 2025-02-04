@@ -9,9 +9,9 @@ eureka:
 
 spring:
   datasource:
-    url: 'jdbc:postgresql://localhost:5432/danielctrenado'
-    username: danielctrenado
-    password: '{cipher}380ff7249b33df83dc575e8e6a3f029d3739c6e038ff6dd450528fb046f317a3dc6cbb7f954201c5da202b4de4af11c2'
+    url: jdbc:postgresql://localhost:5432/danielctrenado
+    username: '{cipher}2e15b7b439951d2d2f2769caca6135451fdadd9c7cb6127f95f748787508af0a'
+    password: '{cipher}fe8155c9ade57c12e524cecbbc55c211a22a7d71f9d77da34cbbad7bf7a9c22ac616d3d03c220b230049732e0b566854'
   jpa:
     properties:
       hibernate.default_schema: danschema
