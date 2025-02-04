@@ -16,5 +16,11 @@ spring:
     properties:
       hibernate.default_schema: danschema
 
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+
 server:
   port: 8081
