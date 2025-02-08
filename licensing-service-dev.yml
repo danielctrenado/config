@@ -19,10 +19,14 @@ spring:
                 default_schema: danschema
 
 management:
-    endpoints:
-        web:
-            exposure:
-                include: '*'
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    health:
+      show-details: always
+      circuitbreakers:
+        enabled: true
 
 example:
     property: I AM DEV
