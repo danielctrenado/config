@@ -59,13 +59,12 @@ resilience4j.circuitbreaker:
       permittedNumberOfCallsInHalfOpenState: 3
       minimumNumberOfCalls: 2
 
-
-resilience4j.thread-pool-bulkhead:
+resilience4j.ratelimiter:
   instances:
-    bulkheadLicenseService:
-      maxThreadPoolSize: 1
-      coreThreadPoolSize: 1
-      queueCapacity: 1
+    licenseService:
+      limitForPeriod: 5
+      limitRefreshPeriod: 5000
+      timeoutDuration: 1000ms
 
 resilience4j.retry:
   instances:
@@ -74,3 +73,11 @@ resilience4j.retry:
       waitDuration: 10000
       retry-exceptions:
         - java.util.concurrent.TimeoutException
+
+resilience4j.thread-pool-bulkhead:
+  instances:
+    bulkheadLicenseService:
+      maxThreadPoolSize: 1
+      coreThreadPoolSize: 1
+      queueCapacity: 1
+
