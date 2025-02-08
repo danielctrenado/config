@@ -42,7 +42,7 @@ resilience4j.circuitbreaker:
     licenseService:
       registerHealthIndicator: true
       slidingWindowSize: 4
-      failureRateThreshold: 10
+      failureRateThreshold: 30
       waitDurationInOpenState: 30s
       permittedNumberOfCallsInHalfOpenState: 3
       minimumNumberOfCalls: 2
@@ -54,7 +54,7 @@ resilience4j.circuitbreaker:
     organizationService:
       registerHealthIndicator: true
       slidingWindowSize: 4
-      failureRateThreshold: 10
+      failureRateThreshold: 30
       waitDurationInOpenState: 30s
       permittedNumberOfCallsInHalfOpenState: 3
       minimumNumberOfCalls: 2
