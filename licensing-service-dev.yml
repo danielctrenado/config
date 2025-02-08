@@ -41,11 +41,11 @@ resilience4j.circuitbreaker:
   instances:
     licenseService:
       registerHealthIndicator: true
-      slidingWindowSize: 4
-      failureRateThreshold: 30
+      slidingWindowSize: 8
+      failureRateThreshold: 60
       waitDurationInOpenState: 30s
       permittedNumberOfCallsInHalfOpenState: 3
-      minimumNumberOfCalls: 2
+      minimumNumberOfCalls: 4
       recordExceptions:
         - org.springframework.web.client.HttpServerErrorException
         - java.io.IOException
