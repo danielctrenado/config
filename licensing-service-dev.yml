@@ -53,7 +53,8 @@ resilience4j.circuitbreaker:
         - org.springframework.web.client.ResourceAccessException
     organizationService:
       registerHealthIndicator: true
-      ringBufferSizeInClosedState: 4
-      ringBufferSizeInHalfOpenState: 3
-      waitDurationInOpenState: 20s
-      failureRateThreshold: 5
+      slidingWindowSize: 4
+      failureRateThreshold: 10
+      waitDurationInOpenState: 30s
+      permittedNumberOfCallsInHalfOpenState: 3
+      minimumNumberOfCalls: 2
