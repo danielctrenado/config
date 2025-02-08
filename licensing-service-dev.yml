@@ -58,3 +58,11 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 30s
       permittedNumberOfCallsInHalfOpenState: 3
       minimumNumberOfCalls: 2
+
+
+resilience4j.thread-pool-bulkhead:
+  instances:
+    bulkheadLicenseService:
+      maxThreadPoolSize: 1
+      coreThreadPoolSize: 1
+      queueCapacity: 1
