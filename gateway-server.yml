@@ -27,3 +27,9 @@ management:
         include: '*'
     gateway:
       enabled: true
+
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.danielctrenado: DEBUG
