@@ -15,6 +15,7 @@ spring:
     name: gateway-server
   cloud:
     gateway:
-        discovery.locator:
+      discovery:
+        locator:
           enabled: true
-          lowerCaseServiceId: true
+          lower-case-service-id: true
