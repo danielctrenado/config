@@ -15,6 +15,14 @@ spring:
   jpa:
     properties:
       hibernate.default_schema: danschema
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/spmia-realm
+          jwk-set-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/certs
+
+
 
 management:
     endpoints:
