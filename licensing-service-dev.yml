@@ -32,7 +32,7 @@ spring:
     stream:
       bindings:
         input:
-          destination: employee-topic
+          destination: organization-change-topic
           content-type: application/json
       kafka:
         binder:
