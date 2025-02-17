@@ -28,7 +28,15 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/certs
-
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: employee-topic
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: localhost:9092
 
 management:
   endpoints:
