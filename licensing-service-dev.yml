@@ -30,13 +30,13 @@ spring:
           jwk-set-uri: http://localhost:8080/realms/spmia-realm/protocol/openid-connect/certs
   cloud:
     stream:
-      bindings:
-        input:
-          destination: organization-change-topic
-          content-type: application/json
       kafka:
         binder:
           brokers: localhost:9092
+      bindings:
+        organizationChange-in-0:
+          destination: organization.change.topic
+          group: organization.change.group
 
 management:
   endpoints:
