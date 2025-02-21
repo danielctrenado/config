@@ -39,7 +39,10 @@ spring:
           content-type: application/json
 
 management:
-    endpoints:
-        web:
-            exposure:
-                include: '*'
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  zipkin:
+    tracing:
+      endpoint: localhost:9411/api/v2/spans
