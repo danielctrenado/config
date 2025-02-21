@@ -2,6 +2,9 @@ logging:
   level:
     org.springframework.web: WARN
     com.danielctrenado: DEBUG
+  pattern:
+    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}] "
+  include-application-name: false
 
 eureka:
   instance:
