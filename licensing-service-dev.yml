@@ -49,6 +49,10 @@ management:
       show-details: always
       circuitbreakers:
         enabled: true
+  zipkin:
+    tracing:
+      endpoint: localhost:9411/api/v2/spans
+
 
 example:
   property: I AM DEV
