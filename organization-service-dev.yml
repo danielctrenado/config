@@ -37,7 +37,11 @@ spring:
         output:
           destination: organization.change.topic
           content-type: application/json
-
+#####################################################################################
+#
+# management
+#
+#####################################################################################
 management:
   endpoints:
     web:
@@ -46,5 +50,6 @@ management:
   zipkin:
     tracing:
       endpoint: localhost:9411/api/v2/spans
-      sampling:
-        probability: 1.0
+  tracing:
+    sampling:
+      probability: 1.0
