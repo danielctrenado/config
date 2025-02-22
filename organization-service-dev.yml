@@ -46,3 +46,5 @@ management:
   zipkin:
     tracing:
       endpoint: localhost:9411/api/v2/spans
+      sampling:
+        probability: 1.0
